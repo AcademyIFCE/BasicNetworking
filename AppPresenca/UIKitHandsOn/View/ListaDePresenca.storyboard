@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lista de Presença-->
+        <scene sceneID="2yh-Ll-gPv">
+            <objects>
+                <navigationController storyboardIdentifier="ListaNavigation" id="fC3-px-pzi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lista de Presença" image="doc.plaintext" catalog="system" id="RAv-jD-ulS"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="X30-q2-Pep">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="exr-kb-wYw" kind="relationship" relationship="rootViewController" id="pc6-d5-kEQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="abw-qc-TYm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1992.8" y="113.79310344827587"/>
+        </scene>
+        <!--🤓 Lista de Presença-->
+        <scene sceneID="1nZ-N5-iD5">
+            <objects>
+                <viewController id="exr-kb-wYw" customClass="ListaDePresencaViewController" customModule="UIKitBasics_HandsOn_01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="35P-OR-hGe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Gb0-aw-2Qz">
+                                <rect key="frame" x="0.0" y="104.5" width="375" height="513.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Gb0-aw-2Qz" firstAttribute="top" secondItem="pDo-nu-IeT" secondAttribute="top" id="UBJ-hE-Fqg"/>
+                            <constraint firstItem="Gb0-aw-2Qz" firstAttribute="bottom" secondItem="pDo-nu-IeT" secondAttribute="bottom" id="Vjq-F4-dIZ"/>
+                            <constraint firstItem="Gb0-aw-2Qz" firstAttribute="leading" secondItem="pDo-nu-IeT" secondAttribute="leading" id="btk-rb-hIN"/>
+                            <constraint firstItem="Gb0-aw-2Qz" firstAttribute="trailing" secondItem="pDo-nu-IeT" secondAttribute="trailing" id="kZc-Vl-0BV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pDo-nu-IeT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="🤓 Lista de Presença" id="PJN-vw-4FS"/>
+                    <connections>
+                        <outlet property="tableView" destination="Gb0-aw-2Qz" id="7Cb-XF-Ro8"/>
+                        <segue destination="3OL-1J-j1u" kind="show" identifier="detailPresenca" id="IYP-hP-Y9Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJp-CR-ZX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2949.5999999999999" y="113.79310344827587"/>
+        </scene>
+        <!--detailPresenca-->
+        <scene sceneID="d8j-Pe-elv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailPresencaStoryboard" referencedIdentifier="detailPresenca" id="3OL-1J-j1u" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XaQ-CH-eao"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GVs-Zk-wuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3783" y="113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.plaintext" catalog="system" width="56" height="64"/>
+    </resources>
+</document>
